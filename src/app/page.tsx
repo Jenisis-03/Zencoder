@@ -5,6 +5,7 @@ import { Testimonials } from "@/components/sections/testimonials"
 import { CTA } from "@/components/sections/cta"
 import { Footer } from "@/components/sections/footer"
 import { FAQ } from "@/components/sections/faq";
+import BuiltToGrow from "@/components/sections/BuiltToGrow";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <Features />
         <Testimonials />
+        <BuiltToGrow/>
         <CTA />
         <FAQ/>
       </main>

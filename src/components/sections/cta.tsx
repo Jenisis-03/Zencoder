@@ -1,28 +1,45 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { FaLock, FaUsers, FaClipboardList, FaUserCog, FaUserShield, FaLayerGroup } from "react-icons/fa";
 
 export function CTA() {
   return (
-    <section className="container py-16 md:py-24">
-      <div className="relative rounded-3xl overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-primary/30 via-primary/5 to-background" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:radial-gradient(white,transparent_70%)] opacity-20" />
-        <div className="relative px-6 py-16 md:px-12 backdrop-blur-sm border border-primary/10 rounded-3xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70">
-              Code Smarter. Stay in Flow.
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Join thousands of developers using Zencoder to build better software, faster.
-            </p>
-            <div className="mt-8">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                <Link href="/signup">Get Started Free</Link>
-              </Button>
-            </div>
-          </div>
+    <section className="w-full py-16 md:py-24 bg-black text-white">
+      <div className="relative rounded-3xl overflow-hidden p-10 md:p-16 max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start">
+        
+        {/* Left Side: Text Content */}
+        <div className="lg:w-1/2 text-left">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">Enterprise-Grade Security and Compliance You Can Trust</h2>
+          <p className="mt-4 text-lg text-gray-400 max-w-lg">
+            Designed for Enterprise Security and Compliance. Zencoder is fully compliant with ISO 27001, GDPR,
+            CCPA, and SOC 2 (coming Q1), ensuring your enterprise meets the most stringent privacy standards.
+          </p>
+        </div>
+        
+        {/* Right Side: Features Grid */}
+        <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 lg:mt-0 lg:ml-12">
+          <FeatureCard icon={<FaLock />} title="SSO" description="Zencoder supports single sign-on for seamless access." />
+          <FeatureCard icon={<FaClipboardList />} title="Audit Trails" description="Zencoder logs every activity for full traceability." />
+          <FeatureCard icon={<FaUserCog />} title="Admin Portal" description="Zencoder centralizes security management in one dashboard." />
+          <FeatureCard icon={<FaUsers />} title="Team Management" description="Zencoder streamlines team oversight for efficient control." />
+          <FeatureCard icon={<FaLayerGroup />} title="User Groups" description="Zencoder organizes users into groups for tailored access." />
+          <FeatureCard icon={<FaUserShield />} title="SAML" description="Zencoder integrates SAML for secure, standards-based authentication." />
         </div>
       </div>
     </section>
-  )
+  );
+}
+
+function FeatureCard({ icon, title, description }) {
+  return (
+    <div className="flex items-start space-x-4">
+      <div className="p-3 bg-orange-500/20 rounded-xl text-orange-500 text-2xl">
+        {icon}
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="text-gray-400 text-sm">{description}</p>
+      </div>
+    </div>
+  );
 }

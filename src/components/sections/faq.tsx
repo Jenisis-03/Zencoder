@@ -25,7 +25,7 @@ export function FAQ() {
   };
 
   return (
-    <div className="bg-[var(--background)] text-[var(--foreground)] flex items-center justify-center min-h-screen w-screen font-inter">
+    <div className="bg-black text-[var(--foreground)] flex items-center justify-center min-h-screen w-screen font-inter">
       <div className="w-full max-w-4xl mx-auto px-7 flex items-center justify-center">
         <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-md p-6 sm:p-8 md:p-10 featured-item text-center w-full">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12">

@@ -4,6 +4,7 @@ import { Features } from "@/components/sections/features"
 import { Testimonials } from "@/components/sections/testimonials"
 import { CTA } from "@/components/sections/cta"
 import { Footer } from "@/components/sections/footer"
+import { FAQ } from "@/components/sections/faq";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
         <Features />
         <Testimonials />
         <CTA />
+        <FAQ/>
       </main>
+      
       <Footer />
     </div>
   );
